@@ -1,21 +1,44 @@
 <script setup lang="ts">
-// This starter template is using Vue 3 <script setup> SFCs
-// Check out https://vuejs.org/api/sfc-script-setup.html#script-setup
-import HelloWorld from './components/HelloWorld.vue'
+import Explorer from './components/Explorer.vue'
+import FileDrop from "./components/FileDrop.vue";
 </script>
 
 <template>
-  <img alt="Vue logo" src="./assets/logo.png" />
-  <HelloWorld msg="Hello Vue 3 + TypeScript + Vite" />
+  <FileDrop class="app__file-drop"/>
+  <Explorer class="app__explorer"/>
 </template>
 
 <style>
-#app {
+html {
+  width: 100%;
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  width: 100%;
+  height: 100%;
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
-  margin-top: 60px;
+}
+
+/*noinspection CssUnusedSymbol*/
+#app {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.app__file-drop {
+  flex: 1 0 auto;
+}
+
+.app__explorer {
+  flex: 1 0 auto;
+  height: 90%;
 }
 </style>
